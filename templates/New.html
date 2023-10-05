@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            background-color: cornsilk;
+            }
+        div {
+            height: 500px;
+            width: 200px;
+            color: blue;
+        }
+        #hello {
+            color: black;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>New page</h1>
+    {{ hi }}
+<br>
+    <a href="/">Return Home</a>
+    <div id="hello">
+
+</div>
+</div>
+<script>
+    window.onload = () => {
+        let data = window.location.href.split('=')[1]
+        let data2 = data.split('%20')
+
+        hello.innerHTML = data2[0]
+        hello.innerHTML +='<br>'
+        hello.innerText += data2[1]
+
+
+
+    }
+</script>
+</body>
+</html>
