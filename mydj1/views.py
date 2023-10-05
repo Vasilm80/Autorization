@@ -51,7 +51,7 @@ def reg(request):    #Регистрация пользователя
         n.email = e
         n.save()
         #return render(request, 'New.html') # и отправляем на новую страницу
-        return redirect(f'/New?hello=Helloy, {l}')
+        return redirect(f'/New?hello=Helloy, {l}')   #передаем в адресную сторку
     return render(request, 'Autorisation.html')
 
 def page_auth(request):
